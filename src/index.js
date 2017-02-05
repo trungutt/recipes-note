@@ -12,7 +12,3 @@ const store = createStore(reducer, 0, applyMiddleware(createLogger()));
 
 store.dispatch({ type: 'INC', payload: 1 });
 store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
