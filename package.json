@@ -5,7 +5,7 @@
 	"scripts": {
 		"prestart": "babel-node scripts/startMessage.js",
 		"start": "npm-run-all --parallel server security-check lint:watch test:watch",
-		"server": "webpack-dev-server",
+		"serve": "webpack-dev-server",
 		"lint": "esw webpack.config.* src scripts --color",
 		"lint:watch": "npm run lint -- --watch",
 		"test": "_mocha --compilers js:babel-core/register --require scripts/testSetup.js \"src/**/*.spec.js\"",

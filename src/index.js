@@ -3,7 +3,7 @@ import createLogger from 'redux-logger';
 
 const reducer = (state, action) => {
 	if (action.type === 'INC') {
-		return state + 1;
+		return state + 3;
 	}
 	return state;
 };
