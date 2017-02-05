@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import actions from '../actions/actions';
-import mockState from '../common/testUtils';
+import mockState from '../utils/testUtils';
 
 import reducers from './reducers';
 
