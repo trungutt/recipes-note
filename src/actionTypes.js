@@ -1,0 +1,9 @@
+const actionTypes = {
+	ADD_RECIPE: 'ADD_RECIPE',
+	UPDATE_RECIPE: 'UPDATE_RECIPE',
+	REMOVE_RECIPE: 'REMOVE_RECIPE',
+	OPEN_RECIPE: 'OPEN_RECIPE',
+	CLOSE_RECIPE: 'CLOSE_RECIPE',
+};
+
+export default actionTypes;
