@@ -3,13 +3,22 @@
 	"version": "1.0.0",
 	"description": "recipes note",
 	"scripts": {
-		"start": "webpack-dev-server --progress --inline"
+		"start": "webpack-dev-server",
+		"lint": "esw webpack.config.* src scripts --color",
+		"lint:watch": "npm run lint -- --watch"
 	},
 	"author": "trungutt",
 	"license": "MIT",
 	"devDependencies": {
 		"babel-cli": "^6.22.2",
+		"babel-eslint": "^7.1.1",
 		"babel-preset-latest": "^6.22.0",
+		"eslint": "^3.15.0",
+		"eslint-config-airbnb": "^14.0.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^6.9.0",
+		"eslint-watch": "^2.1.14",
 		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.3.0"
 	}
