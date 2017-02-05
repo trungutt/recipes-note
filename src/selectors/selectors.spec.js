@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import mockState from './testUtils';
+import mockState from '../common/testUtils';
 
 import selectors from './selectors';
 
