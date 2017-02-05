@@ -1,14 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
-import createLogger from 'redux-logger';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
-const reducer = (state, action) => {
-	if (action.type === 'INC') {
-		return state + 3;
-	}
-	return state;
-};
+import configureStore from './store';
+import App from './components/App';
 
-const store = createStore(reducer, 0, applyMiddleware(createLogger()));
-
-store.dispatch({ type: 'INC', payload: 1 });
-store.dispatch({ type: 'INC', payload: 1 });
+render(
+	<Provider store={configureStore()}>
+		<App />
+	</Provider>,
+	document.getElementById('app'),
+);

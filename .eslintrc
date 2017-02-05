@@ -19,6 +19,23 @@
 				"SwitchCase": 1
 			}
 		],
-		"jsx-a11y/no-marquee": "off"
+		"jsx-a11y/no-marquee": "off",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"react/jsx-indent": [
+			2,
+			"tab"
+		],
+		"react/jsx-indent-props": [
+			2,
+			"tab"
+		]
 	}
 }
