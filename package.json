@@ -3,9 +3,14 @@
 	"version": "1.0.0",
 	"description": "recipes note",
 	"scripts": {
-		"start": "webpack-dev-server",
+		"prestart": "babel-node scripts/startMessage.js",
+		"start": "npm-run-all --parallel server security-check lint:watch test:watch",
+		"server": "webpack-dev-server",
 		"lint": "esw webpack.config.* src scripts --color",
-		"lint:watch": "npm run lint -- --watch"
+		"lint:watch": "npm run lint -- --watch",
+		"test": "_mocha --compilers js:babel-core/register --require scripts/testSetup.js \"src/**/*.spec.js\"",
+		"test:watch": "npm run test -- --watch --watch-extensions jsx",
+		"security-check": "nsp check"
 	},
 	"author": "trungutt",
 	"license": "MIT",
@@ -20,10 +25,18 @@
 		"eslint-plugin-jsx-a11y": "^4.0.0",
 		"eslint-plugin-react": "^6.9.0",
 		"eslint-watch": "^2.1.14",
+		"npm-run-all": "^4.0.1",
+		"nsp": "^2.6.2",
 		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.3.0"
 	},
 	"dependencies": {
+		"chai": "^3.5.0",
+		"chai-immutable": "^1.6.0",
+		"chalk": "^1.1.3",
+		"immutable": "^3.8.1",
+		"jsdom": "^9.10.0",
+		"mocha": "^3.2.0",
 		"redux": "^3.6.0",
 		"redux-logger": "^2.8.1"
 	}
